@@ -11,7 +11,7 @@ from registers.models import (
     UpcomingFuneral, ExpiredGrave, Grave, FuneralMonument,
     AnnualOwnerlessDeathRegister, UpcomingFuneralArchive,
     GraveOwnershipRequestsRegister, GraveOwnership, AnnualDeathIndexRegister,
-    GravesToExpireThisYear, GravesPayedThisYear
+    GravesToExpireThisYear, GravesPayedThisYear, ContractsRegister
 )
 
 
@@ -194,6 +194,14 @@ class GravesPayedThisYearAdmin(admin.ModelAdmin):
 
         return self.model.objects.filter(pk__in=payed_ids)
 
+
+class ContractsRegisterAdmin(admin.ModelAdmin):
+    list_display = ('current_number', 'contract_number', 'release_date',
+                    'first_name', 'last_name', 'address')
+
+    def get_queryset(self, request):
+        return self.model.objects.all()
+
 admin.site.register(UpcomingFuneral, UpcomingFuneralAdmin)
 admin.site.register(UpcomingFuneralArchive, UpcomingFuneralAdminArchive)
 admin.site.register(Grave, GraveAdmin)
@@ -208,3 +216,4 @@ admin.site.register(GravesToExpireThisYear,
                     GravesToExpireThisYearAdmin)
 admin.site.register(GravesPayedThisYear,
                     GravesToExpireThisYearAdmin)
+admin.site.register(ContractsRegister, ContractsRegisterAdmin)
