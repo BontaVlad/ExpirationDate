@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+{% load i18n %}
+
+{% block content %}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Expiration Date Help</h3>
+        </div>
+        <div class="panel-body">
+            <h3>De citit:</h3>
+            <p>Pentru userii noi ar fi de folos să citească această secţiune mai
+            intîi:</p>
+            <p>
+            Aplicaţia insine prezintă o interfaţa user-friendly cu utilizatorul
+            permintîndu-i o manipulare usoară a datelor in funcţie de ce are el
+            nevoie.</p>
+            <p>
+            Panoul principal constă intr-un meniu situat in stînga paginii cu
+            următoarele elemente:</p>
+            <ul>
+                <li>Registrii</li>
+                <li>Cimitiere</li>
+                <li>Persoane</li>
+            </ul>
+            <p>
+            In care utilizatorul poate vedea/căuta informaţii.
+            </br>
+            <img class="img-thumbnail" src="{% static "expirationDate/img/poza1.jpg" %}" alt="My image"/>
+<!-- #(poza1) -->
+            </br>
+            In mijlocul paginii este situat meniul principal cu care
+            utilizatorul poate să adauge,modifice,şteargă diferite informaţii
+            din baza de date a primăriei  pentru informatizarea Serviciului
+            Administrare Cimitire Domeniul Public.
+            </br>
+            <img class="img-thumbnail" src="{% static "expirationDate/img/poza2.jpg" %}" alt="My image"/>
+<!-- #(poza2) -->
+            </p>
+            </br>
+            <p>
+            Utilizatorul dispune şi de un log in care poate vedea istoricul
+            acţiunilor sale precum şi a celorlalţi utilizatori.
+            </p>
+            </br>
+            <img class="img-thumbnail" src="{% static "expirationDate/img/poza3.jpg" %}" alt="My image"/>
+<!-- #(poza3) -->
+            </br>
+            <p>
+            In dreapta sus este situat panoul utilizatorului de unde acesta işi poate
+            schimba parola contului sau a se deloga din aplicatie.
+            </p>
+        </div>
+    </div>
+{% endblock content %}
